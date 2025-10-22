@@ -1,0 +1,10 @@
+{% if img_data %}
+  <div style="margin-top:20px;">
+    <h3>Certificate Preview:</h3>
+    <img src="{{ img_data }}" alt="Certificate Preview" style="border:2px solid #000; width:600px;" />
+    <br /><br />
+    <a href="{% url 'certificate_download' cert.id %}" class="text-white bg-blue-500 py-2 px-4 rounded hover:bg-blue-600">Download Certificate</a>
+  </div>
+{% else %}
+  <p>Please log in to view your certificate.</p>
+{% endif %}
